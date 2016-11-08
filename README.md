@@ -1,2 +1,1 @@
-# angular2do
-Изучение Angular 2
+# Angular 2Do

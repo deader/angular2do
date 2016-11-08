@@ -1,20 +1,7 @@
-import { Component } from '@angular/core';
-
-import { Todo } from './shared/todo.model';
-import { TodoService } from './shared/todo.service';
-import { TodosComponent } from './components/todos/todos.component';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'todo-app',
-    templateUrl: './app/app.component.html',
-    styleUrls: ['./app/app.component.css'],
-    directives: [TodosComponent],
-    providers: [TodoService]
+    template: '<h1>Angular 2Do</h1>'
 })
-export class AppComponent {
-    title: string;
-
-    constructor() {
-        this.title = 'Angular 2Do';
-    }
-}
+export class AppComponent { }
