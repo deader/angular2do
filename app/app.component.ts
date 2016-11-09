@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { todoListComponent } from './todo/todo-list.component'
+import { todoListComponent } from './todo/todo-list.component';
+import { Todo } from './todo/todo';
 
 @Component({
     selector: 'todo-app',
@@ -9,7 +10,7 @@ import { todoListComponent } from './todo/todo-list.component'
 })
 export class AppComponent { 
     title: string;
-    todos: string[];
+    todos: Todo[];
     
     constructor() {
         this.title = "Angular2do";
@@ -17,10 +18,6 @@ export class AppComponent {
     }
 
     addTodo(title: string) {
-        this.todos.push(title);
-       // let title = input.value;
-       // input.value = "";
-       // console.log('Добавить задачи: ' + title);
-       // this.todos.push(title);
+        this.todos.push(new Todo(title));
     }
 }
