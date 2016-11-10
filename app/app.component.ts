@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TodoFormComponent } from './todo/todo-form.component';
-import { TodoListComponent } from './todo/todo-list.component';
-import { Todo } from './todo/todo';
+import { TodoFormComponent } from '../app/components/todo-form/todo-form.component';
+import { TodoListComponent } from '../app/components/todo-list//todo-list.component';
+import { Todo } from '../app/shared/todo.model';
 
 @Component({
     selector: 'todo-app',
