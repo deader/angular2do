@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { TodoService } from './shared/todo.service';
 import { Todo } from './shared/todo.model';
+import { TodoService } from './shared/todo.service';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 

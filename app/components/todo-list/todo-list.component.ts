@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ITodo, Todo } from '../../shared/todo.model';
+import { ITodo } from '../../shared/todo.model';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { TodoService } from '../../shared/todo.service';
 
@@ -22,7 +22,8 @@ export class TodoListComponent implements OnInit {
     }
 
     get sortedTodos(): ITodo[] {
-        return this.todos.map(todo => todo)
+        return this.todos
+        .map(todo => todo)
         .sort((a, b) => {
             if (a.title > b.title) return 1;
             else if (a.title < b.title) return -1;
@@ -36,6 +37,6 @@ export class TodoListComponent implements OnInit {
     }
 
     onTodoDeleted(todo: ITodo): void {
-        this.todoService.deleteTodo(todo);
+        this.todoService.deleteTodo(todo).then(todo => console.log(todo));
     }
 }
