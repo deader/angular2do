@@ -16,7 +16,7 @@ export class TodoService {
 
     getTodos(): Observable<ITodo[]> {
         return this.http.get(this.apiUrl)
-                        .map(res => {res.json().data})
+                        .map(res => res.json().data)
                         //.map(res => {console.log(res); return res.json().data}) // отладка
                         .catch(this.handleError);
     }
